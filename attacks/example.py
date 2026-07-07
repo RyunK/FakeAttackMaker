@@ -18,6 +18,7 @@ def run():
             Raw(payload)
         )
 
+        # 실제로 패킷을 보내면 안돼서 주석 처리
         # send(packet, verbose=False)
         time.sleep(DEFAULT_INTERVAL)
 
