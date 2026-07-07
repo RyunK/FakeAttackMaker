@@ -1,5 +1,9 @@
 # 가짜 공격 생성기
 
+**안내 노션 링크**
+https://app.notion.com/p/396da9caea25804785faca5cff14e15c?source=copy_link
+
+내용은 본 README 파일과 거의 동일합니다.
 
 **내부망**으로 가짜 공격을 수행할 수 있는 프로그램입니다.
 
