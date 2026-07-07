@@ -8,10 +8,19 @@ attack_modules = []
 
 # attacks 폴더 안의 모든 py 파일 읽기
 for _, module_name, _ in pkgutil.iter_modules(attacks.__path__):
+    try:
+        module = importlib.import_module(f"attacks.{module_name}")
 
-    module = importlib.import_module(f"attacks.{module_name}")
+        if not hasattr(module, "NAME"):
+            continue
 
-    attack_modules.append(module)
+        if not callable(getattr(module, "run", None)):
+            continue
+
+        attack_modules.append(module)
+
+    except Exception as e:
+        print(f"{module_name} 로드 실패: {e}")
 
 attack_modules.sort(key=lambda m: m.NAME)
 
@@ -33,6 +42,7 @@ while True:
     elif cmd == "A":
 
         for attack in attack_modules:
+            
 
             print(f"\n[{attack.NAME}]")
             attack.run()
