@@ -11,7 +11,7 @@ from config import (
 
 NAME = "ACK Flood"
 
-PACKET_COUNT = 10000
+PACKET_COUNT = 3000
 BATCH_SIZE = 500
 
 
