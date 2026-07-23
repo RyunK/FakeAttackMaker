@@ -18,4 +18,4 @@ def send_amp_random_packet(target_ip, target_port, sport, payload):
         )
 
     # 실제로 패킷을 보내면 안돼서 주석 처리
-    # send(packet, verbose=False)
+    send(packet, verbose=False)
